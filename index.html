@@ -673,13 +673,26 @@
   }
   .art-frame {
     width: 100%;
-    max-width: 420px;
-    aspect-ratio: 1;
+    max-width: 480px;
+    aspect-ratio: 3 / 2;
     border: 2px solid rgba(201,144,26,0.25);
     position: relative;
     overflow: hidden;
     background: #0a1510;
     border-radius: 8px;
+  }
+  .history-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Noite: luz lunar fria, dessaturado */
+    filter: brightness(0.78) saturate(0.82) contrast(1.05) hue-rotate(-6deg);
+    transition: filter 6s ease !important;
+  }
+  body.day-theme .history-image {
+    /* Dia: luz solar quente, vibrante */
+    filter: brightness(1.08) saturate(1.12) contrast(1.0);
   }
   .art-frame::before {
     content: 'MAPA DO QUINTAL';
@@ -1696,32 +1709,14 @@
         <div class="art-corner tr"></div>
         <div class="art-corner bl"></div>
         <div class="art-corner br"></div>
-        <!-- Layered backyard map inspired by frosted UI depth panels -->
-        <div class="backyard-layer-scene" aria-hidden="true">
-          <div class="layer-glass">
-            <span class="layer-haze haze-a"></span>
-            <span class="layer-haze haze-b"></span>
-            <div class="iso-stack">
-              <div class="iso-shadow"></div>
-              <div class="iso-layer layer-roots">
-                <span class="root root-a"></span>
-                <span class="root root-b"></span>
-                <span class="root root-c"></span>
-              </div>
-              <div class="iso-layer layer-danger"></div>
-              <div class="iso-layer layer-path"></div>
-              <div class="iso-layer layer-corn"></div>
-              <span class="layer-marker marker-a"></span>
-              <span class="layer-marker marker-b"></span>
-              <span class="layer-marker marker-c"></span>
-            </div>
-            <span class="layer-callout callout-corn">Milharal</span>
-            <span class="layer-callout callout-roots">Raízes</span>
-            <span class="layer-callout callout-danger">Zona do Espantalho</span>
-            <span class="layer-callout callout-secret">Segredo vivo</span>
-            <div class="layer-vignette"></div>
-          </div>
-        </div>
+        <!-- Diorama do quintal: cena com critters defendendo o celeiro -->
+        <img class="history-image"
+             src="assets/barn_diorama.jpg"
+             alt="Diorama em voxel do quintal: gato no telhado, porco-guerreiro com escudo, ovelha, cão e pato com banjo defendendo o celeiro vermelho"
+             loading="lazy"
+             decoding="async"/>
+      </div>
+    </div>
       </div>
     </div>
   </div>
