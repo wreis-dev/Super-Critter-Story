@@ -1253,6 +1253,23 @@
     text-align: center;
     border-top: 1px solid rgba(201,144,26,0.15);
   }
+  .platforms-wrap .section-header {
+    margin-bottom: 34px;
+  }
+  .platform-showcase {
+    width: min(1180px, 100%);
+    margin: 0 auto 44px;
+    overflow: hidden;
+    border: 1px solid rgba(245,233,204,0.16);
+    border-radius: 8px;
+    background: #0a1510;
+    box-shadow: 0 26px 70px rgba(0,0,0,0.38);
+  }
+  .platform-showcase img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
   .platform-chips {
     display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px;
   }
@@ -1475,6 +1492,10 @@
 /* ── PLATFORM CHIPS ── */
   body.day-theme .platforms-wrap {
     background: #1f0b04;
+  }
+  body.day-theme .platform-showcase {
+    border-color: rgba(232,160,64,0.24);
+    box-shadow: 0 26px 70px rgba(55,19,7,0.42);
   }
   body.day-theme .platform-chip {
     border-color: rgba(232,160,64,0.20);
@@ -1949,6 +1970,12 @@
     <p class="section-label"><em>Quando você estiver pronto</em></p>
     <h2>O quintal estará aqui</h2>
   </div>
+  <figure class="platform-showcase reveal reveal-delay-1">
+    <img src="assets/switch-battle-preview.png"
+         alt="Cena de batalha de Super Critter Story em um console portátil"
+         loading="lazy"
+         decoding="async">
+  </figure>
   <div class="platform-chips reveal reveal-delay-1">
     <div class="platform-chip">
       <div class="platform-name">PC — Steam</div>
