@@ -1,6 +1,3 @@
-import dayTrackUrl from "../../assets/audio/suuny.mp3";
-import nightTrackUrl from "../../assets/audio/moonlit-backyard-legends.mp3";
-
 import { getCurrentTheme } from "./theme-toggle.js";
 
 const FADE_MS = 1600;
@@ -53,17 +50,12 @@ export function initAmbientPlayer() {
     day: {
       audio: dayAudio,
       title: "Lenda no Milharal",
-      url: dayTrackUrl,
     },
     night: {
       audio: nightAudio,
       title: "Moonlit Backyard Legends",
-      url: nightTrackUrl,
     },
   };
-
-  tracks.day.audio.src = tracks.day.url;
-  tracks.night.audio.src = tracks.night.url;
 
   let currentTrack = getCurrentTheme();
   let isPlaying = false;
