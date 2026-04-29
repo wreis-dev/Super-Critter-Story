@@ -1,0 +1,112 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --night:    #060c09;
+    --deep:     #0e1a12;
+    --forest:   #1a2e1e;
+    --moss:     #2d5a35;
+    --fern:     #4a8a52;
+    --gold:     #c9901a;
+    --amber:    #e8b84b;
+    --straw:    #f0d88a;
+    --parchment:#f5e9cc;
+    --cream:    #fdf6e8;
+    --fog:      rgba(245,233,204,0.08);
+    --fog2:     rgba(245,233,204,0.14);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--night);
+    color: var(--parchment);
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='4' fill='%23c9901a' opacity='0.8'/%3E%3C/svg%3E") 10 10, auto;
+    transition: background-color 2s ease, color 2s ease;
+  }
+
+  /* Global slow transitions for themed elements */
+  body *, body *::before, body *::after {
+    transition-property: background-color, color, border-color, fill, stroke, box-shadow, filter, opacity;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+  }
+  /* Override for elements that need faster interaction transitions */
+  body a, body button, body .btn-primary, body .btn-secondary,
+  body .nav-cta, body .pillar-card, body .char-card, body .platform-chip,
+  body nav {
+    transition: background-color 2s ease, color 2s ease, border-color 2s ease,
+                fill 2s ease, filter 2s ease, box-shadow 0.2s ease,
+                transform 0.15s ease, opacity 0.3s ease !important;
+  }
+  /* Keep reveal animations fast */
+  body .reveal {
+    transition: opacity 1.4s ease-out, transform 1.4s ease-out !important;
+  }
+
+  /* ── NOISE TEXTURE ── */
+  body::before {
+    content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    opacity: 0.6;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 0 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    transition: background 0.4s, backdrop-filter 0.4s;
+  }
+  nav.scrolled {
+    background: rgba(6,12,9,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,144,26,0.18);
+  }
+  .nav-logo {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--amber);
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    padding-right: 24px;  /* buffer adicional */
+    white-space: nowrap;
+  }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    margin-left: 80px;  /* respiro garantido em relação ao logo */
+  }
+  .nav-links a {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: rgba(245,233,204,0.65);
+    text-decoration: none;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--amber); }
+  .nav-cta {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--gold);
+    color: var(--night);
+    padding: 9px 22px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: none;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    transition: background 0.2s, transform 0.15s;
+  }
+  .nav-cta:hover { background: var(--amber); transform: scale(1.04); }

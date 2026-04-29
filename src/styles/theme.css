@@ -1,0 +1,133 @@
+/* ═══════════════════════════════════════════════════
+     DAY THEME  —  overrides all :root night variables
+     Apply class="day-theme" to <body class="day-theme"> to activate.
+     Remove it to restore night. Transitions are slow
+     and automatic (2s ease on all colour properties).
+  ═══════════════════════════════════════════════════ */
+
+  body.day-theme {
+    /* Backgrounds: underground palette aligned with Raizes.png */
+    --night:    #1f0b04;
+    --deep:     #2a1408;
+    --forest:   #3a2515;
+    --moss:     #6b4828;
+    --fern:     #8a6234;
+    /* Accents */
+    --gold:     #e8a040;
+    --amber:    #f0c070;
+    --straw:    #e8d4ae;
+    /* Text */
+    --parchment:#e8d4ae;
+    --cream:    #fff0c8;
+    /* Overlays */
+    --fog:      rgba(232,160,64,0.10);
+    --fog2:     rgba(232,160,64,0.18);
+  }
+
+  /* ── NAV ── */
+  body.day-theme nav.scrolled {
+    background: rgba(31,11,4,0.9);
+    border-bottom: 1px solid rgba(232,160,64,0.22);
+  }
+  body.day-theme .nav-links a { color: rgba(232,212,174,0.68); }
+  body.day-theme .nav-links a:hover { color: var(--amber); }
+
+  /* ── HERO ── */
+  body.day-theme .hero-scroll span { color: rgba(232,212,174,0.5); }
+  body.day-theme .scroll-line {
+    background: linear-gradient(to bottom, rgba(232,160,64,0.42), transparent);
+  }
+  body.day-theme .hero-desc { color: rgba(232,212,174,0.78); }
+  body.day-theme .hero-eyebrow {
+    color: var(--amber);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 14px rgba(232,160,64,0.35);
+  }
+  body.day-theme .hero-subtitle {
+    color: var(--cream);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.55), 0 0 16px rgba(0,0,0,0.4);
+  }
+
+  /* ── SECTIONS / BACKGROUNDS ── */
+  body.day-theme .pitch {
+    background: linear-gradient(to bottom, var(--night), var(--deep));
+  }
+  body.day-theme .pillars-wrap { background: var(--deep); }
+  body.day-theme .characters-wrap {
+    background: linear-gradient(to bottom, var(--deep), var(--night));
+  }
+  body.day-theme .classes-wrap {
+    background: linear-gradient(to bottom, var(--night), var(--deep));
+  }
+  body.day-theme footer {
+    background: var(--night);
+    border-top: 1px solid rgba(232,160,64,0.12);
+  }
+
+  /* ── SECTION DIVIDERS ── */
+  body.day-theme .section-divider {
+    background: linear-gradient(to right, transparent, rgba(232,160,64,0.35), transparent);
+  }
+
+  /* ── TEXT OVERRIDES ── */
+  body.day-theme .pitch p,
+  body.day-theme .hero-desc { color: rgba(232,212,174,0.78); }
+  body.day-theme .pillar-card p { color: rgba(232,212,174,0.68); }
+  body.day-theme .section-header p { color: rgba(232,212,174,0.58); }
+  body.day-theme .stat-label { color: rgba(232,212,174,0.48); }
+  body.day-theme .pillar-tag { color: rgba(232,160,64,0.58); }
+  body.day-theme .job-table td { color: rgba(232,212,174,0.78); }
+  body.day-theme .job-table thead tr { background: rgba(232,160,64,0.10); }
+  body.day-theme .job-table th { border-bottom-color: rgba(232,160,64,0.25); }
+  body.day-theme .job-table td { border-bottom-color: rgba(232,212,174,0.08); }
+  body.day-theme .job-table tr:hover td { background: rgba(232,160,64,0.12); }
+  body.day-theme .platform-name { color: rgba(232,212,174,0.82); }
+  body.day-theme .platform-detail { color: rgba(232,212,174,0.52); }
+  body.day-theme .footer-copy { color: rgba(232,212,174,0.42); }
+  body.day-theme .footer-links a { color: rgba(232,212,174,0.48); }
+  body.day-theme .footer-links a:hover { color: var(--amber); }
+
+  /* ── BUTTONS ── */
+  body.day-theme .btn-secondary {
+    color: var(--parchment);
+    border-color: rgba(232,212,174,0.32);
+  }
+  body.day-theme .btn-secondary:hover { border-color: var(--amber); color: var(--amber); }
+
+  /* ── CARDS + FRAMES ── */
+  body.day-theme .pillar-card { background: #3a2515; }
+  body.day-theme .pillar-card:hover { background: #4a301b; }
+  body.day-theme .stat-box {
+    background: rgba(232,160,64,0.10);
+    border-color: rgba(232,160,64,0.20);
+  }
+  body.day-theme .art-frame { background: #2a1408; }
+  body.day-theme .char-card {
+    background: var(--forest);
+    border-color: rgba(232,160,64,0.22);
+  }
+  body.day-theme .char-card .char-bg {
+    filter: brightness(0.9) saturate(0.95) sepia(0.18);
+  }
+  body.day-theme .char-card:hover .char-bg {
+    filter: brightness(0.58) saturate(0.9) sepia(0.18);
+  }
+  body.day-theme .char-info {
+    background: linear-gradient(to top, rgba(31,11,4,0.98) 0%, transparent 100%);
+  }
+  body.day-theme .char-reveal {
+    background: rgba(42,20,8,0.97);
+  }
+  body.day-theme .char-reveal-text { color: rgba(232,212,174,0.82); }
+  body.day-theme .char-stat-label { color: rgba(232,212,174,0.5); }
+  body.day-theme .char-stat-track { background: rgba(232,212,174,0.12); }
+
+/* ── PLATFORM CHIPS ── */
+  body.day-theme .platforms-wrap {
+    background: #1f0b04;
+  }
+  body.day-theme .platform-chip {
+    border-color: rgba(232,160,64,0.20);
+  }
+  body.day-theme .platform-chip:hover {
+    border-color: var(--gold);
+  }

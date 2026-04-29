@@ -1,0 +1,36 @@
+/* Responsive layout */
+@media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .pitch { grid-template-columns: 1fr; gap: 40px; }
+    .art-frame { max-width: min(420px, 100%); }
+    .art-frame::before { font-size: 8px; left: 12px; letter-spacing: 0.16em; }
+    .layer-glass { inset: 20px; }
+    .iso-stack { width: 82%; height: 58%; top: 56%; }
+    .iso-layer { width: 68%; height: 30%; }
+    .layer-callout { letter-spacing: 0.08em; }
+    .layer-callout::after { width: 26px; }
+    .callout-corn { left: 7%; top: 36%; }
+    .callout-roots { right: 6%; bottom: 17%; }
+    .callout-danger { right: 5%; top: 55%; }
+    .callout-secret { left: 8%; bottom: 30%; }
+    .pillars-wrap, .characters-wrap, .classes-wrap, .platforms-wrap { padding: 90px 20px; }
+    .interstitial { padding: 70px 20px; }
+    .bestiary-grid { gap: 32px 20px; }
+    footer { grid-template-columns: 1fr; }
+    .footer-links { align-items: flex-start; }
+  }
+
+@media (max-width: 768px) {
+    .ambient-player {
+      left: 20px;
+      bottom: 20px;
+      width: 52px;
+    }
+    .ambient-player:hover,
+    .ambient-player:focus-within {
+      width: min(238px, calc(100vw - 104px));
+    }
+    .ambient-details { min-width: 160px; }
+    .ambient-volume { width: 150px; }
+  }
