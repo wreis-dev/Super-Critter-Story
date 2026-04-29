@@ -3,26 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Super Critter Story: Backyard Legends</title>
+<title>Super Critter Story: Backyard Legends | RPG tático por turnos</title>
+<meta name="description" content="Monte um esquadrão de animais da fazenda e enfrente o Espantalho em um RPG tático por turnos com batalhas em grade, classes cheias de personalidade e narrativa emocional.">
+<meta name="keywords" content="Super Critter Story, Backyard Legends, RPG tático por turnos, tactics RPG, jogo indie brasileiro, jogo de estratégia, RPG com animais, cozy tactics RPG">
+<meta name="author" content="Backyard Legends Studios">
+<meta name="theme-color" content="#1f0b04">
+<link rel="canonical" href="https://wreis-dev.github.io/Super-Critter-Story/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Super Critter Story: Backyard Legends">
+<meta property="og:description" content="Monte um esquadrão de animais da fazenda e enfrente o Espantalho em um RPG tático por turnos.">
+<meta property="og:url" content="https://wreis-dev.github.io/Super-Critter-Story/">
+<meta property="og:image" content="https://wreis-dev.github.io/Super-Critter-Story/src/assets/images/switch-battle-preview-cutout.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Super Critter Story: Backyard Legends">
+<meta name="twitter:description" content="Um RPG tático por turnos sobre animais da fazenda, segredos no milharal e um Espantalho que talvez não seja o vilão.">
+<meta name="twitter:image" content="https://wreis-dev.github.io/Super-Critter-Story/src/assets/images/switch-battle-preview-cutout.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./src/styles/main.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Super Critter Story: Backyard Legends",
+  "url": "https://wreis-dev.github.io/Super-Critter-Story/",
+  "image": "https://wreis-dev.github.io/Super-Critter-Story/src/assets/images/switch-battle-preview-cutout.png",
+  "description": "RPG tático por turnos sobre um esquadrão de animais da fazenda enfrentando o Espantalho em batalhas em grade.",
+  "genre": ["Tactical RPG", "Turn-based strategy", "Indie game"],
+  "gamePlatform": ["PC", "iOS", "Android"],
+  "inLanguage": "pt-BR",
+  "author": {
+    "@type": "Organization",
+    "name": "Backyard Legends Studios"
+  }
+}
+</script>
 <script type="module" src="./src/js/main.js"></script>
 </head>
 <body class="day-theme">
 
-<!-- ── NAV ── -->
 <nav id="main-nav">
-  <a href="#" class="nav-logo">Critter Story</a>
+  <a href="#inicio" class="nav-logo">Super Critter Story</a>
   <ul class="nav-links">
-    <li><a href="#historia">História</a></li>
+    <li><a href="#mecanicas">Gameplay</a></li>
     <li><a href="#personagens">Personagens</a></li>
     <li><a href="#classes">Bestiário</a></li>
-    <li><a href="#mecanicas">O Mundo</a></li>
+    <li><a href="#plataformas">Playtest</a></li>
   </ul>
-  <a href="#plataformas" class="nav-cta">Lembre-me</a>
+  <a href="https://github.com/wreis-dev/Super-Critter-Story/issues/new?title=Quero%20entrar%20no%20playtest%20de%20Super%20Critter%20Story&body=Oi!%20Quero%20receber%20noticias%20e%20testar%20Super%20Critter%20Story%20quando%20o%20playtest%20abrir." class="nav-cta" target="_blank" rel="noopener">Playtest</a>
 </nav>
 
-<!-- ── HERO ── -->
 <section class="hero" id="inicio">
   <div class="hero-sky"></div>
   <div class="hero-sun"></div>
@@ -30,28 +62,22 @@
   <div class="stars" id="stars"></div>
   <div id="fireflies"></div>
 
-  <!-- Scarecrow voxel renders -->
   <div class="scarecrow-wrap" aria-hidden="true">
     <img class="scarecrow-art scarecrow-day" src="./src/assets/scarecrow/scarecrow-day-voxel.png" alt="" decoding="async">
     <img class="scarecrow-art scarecrow-night" src="./src/assets/scarecrow/scarecrow-night-voxel.png" alt="" decoding="async">
   </div>
 
-  <!-- Ground -->
   <div class="hero-ground"></div>
-
-  <!-- Milharal — três camadas para profundidade -->
   <div class="crops crops-back" id="crops-back"></div>
-  <div class="crops crops-mid"  id="crops-mid"></div>
+  <div class="crops crops-mid" id="crops-mid"></div>
   <div class="crops crops-front" id="crops-front"></div>
 
-  <!-- Content -->
   <div class="hero-content">
-    <p class="hero-eyebrow"><em>Uma fábula em turnos · para respirar devagar</em></p>
     <h1 class="hero-title">Super Critter Story:<br><span>Backyard Legends</span></h1>
-    <p class="hero-subtitle">Um RPG tático no quintal ensolarado</p>
+    <p class="hero-subtitle">Pequenos heróis. Grandes planos.</p>
     <div class="hero-btns">
-      <a href="#historia" class="btn-primary">Entrar no mundo</a>
-      <a href="#personagens" class="btn-secondary">Conhecer os bichos</a>
+      <a href="https://github.com/wreis-dev/Super-Critter-Story/issues/new?title=Quero%20entrar%20no%20playtest%20de%20Super%20Critter%20Story&body=Oi!%20Quero%20receber%20noticias%20e%20testar%20Super%20Critter%20Story%20quando%20o%20playtest%20abrir." class="btn-primary" target="_blank" rel="noopener">Entrar no playtest</a>
+      <a href="#mecanicas" class="btn-secondary">Ver gameplay</a>
     </div>
   </div>
 
@@ -61,34 +87,24 @@
   </div>
 </section>
 
-<!-- ── RAÍZES — transição visual abaixo do milharal ── -->
 <div class="roots-transition" aria-hidden="true"></div>
-
 <div class="section-divider"></div>
 
-<!-- ── HISTORIA / PITCH ── -->
 <section id="historia">
   <div class="pitch">
     <div class="reveal">
-      <div class="pitch-badge"><em>A História</em></div>
-      <h2>Uma fábula tática de lealdade e medo</h2>
-      <p>O Espantalho não é um vilão. Ele é o guardião que ficou para trás — acorrentado ao medo de ser esquecido, transformando a fazenda em uma prisão disfarçada de proteção.</p>
-      <p>Você controla os animais. Mas quem controla o Espantalho?</p>
-      </div>
+      <div class="pitch-badge"><em>Por que jogar</em></div>
+      <h2>Um tactics RPG fofo por fora e afiado por dentro</h2>
+      <p>Você lidera animais comuns da fazenda como se fossem heróis improváveis: cada um tem função, medo, fraqueza e caminho de evolução.</p>
+      <p>O Espantalho não é apenas o vilão. Ele é o mistério que transforma cada batalha em uma pergunta: proteger o quintal ainda conta como amor quando vira prisão?</p>
+    </div>
     <div class="pitch-art reveal reveal-delay-2">
       <div class="art-frame">
         <div class="art-corner tl"></div>
         <div class="art-corner tr"></div>
         <div class="art-corner bl"></div>
         <div class="art-corner br"></div>
-        <!-- Diorama do quintal: cena com critters defendendo o celeiro -->
-        <img class="history-image"
-             src="./src/assets/images/barn_diorama.jpg"
-             alt="Diorama em voxel do quintal: gato no telhado, porco-guerreiro com escudo, ovelha, cão e pato com banjo defendendo o celeiro vermelho"
-             loading="lazy"
-             decoding="async"/>
-      </div>
-    </div>
+        <img class="history-image" src="./src/assets/images/barn_diorama.jpg" alt="Diorama em voxel do quintal com animais defendendo o celeiro vermelho" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -96,16 +112,15 @@
 
 <div class="section-divider"></div>
 
-<!-- ── PILLARS ── -->
 <section class="pillars-wrap" id="mecanicas">
   <div class="section-header reveal">
-    <p class="section-label"><em>Quatro verdades deste mundo</em></p>
-    <h2>O que você encontra aqui</h2>
-    <p>Nem todo caminho precisa ser rápido. Estes são os sinais que vão te guiar.</p>
+    <p class="section-label"><em>Gameplay sem complicar</em></p>
+    <h2>Pequenos heróis, grandes planos</h2>
+    <p>Escolha seus companheiros, combine talentos e use o terreno para transformar cada turno em uma pequena história.</p>
   </div>
   <div class="pillars-grid">
     <div class="pillar-card reveal reveal-delay-1">
-      <svg class="pillar-icon" viewBox="0 0 48 48" fill="none">
+      <svg class="pillar-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
         <rect x="4" y="4" width="40" height="40" stroke="#c9901a" stroke-width="1.5"/>
         <rect x="10" y="10" width="8" height="8" fill="#c9901a" opacity="0.8"/>
         <rect x="22" y="22" width="8" height="8" fill="#c9901a" opacity="0.5"/>
@@ -113,11 +128,11 @@
         <rect x="10" y="30" width="8" height="8" fill="#c9901a" opacity="0.3"/>
         <line x1="14" y1="14" x2="26" y2="26" stroke="#c9901a" stroke-width="1" opacity="0.4"/>
       </svg>
-      <h3>Profundidade Tática</h3>
-      <p>Cada batalha é um quebra-cabeça com múltiplas soluções. Terreno, direção, ordem de turnos — cada detalhe importa.</p>
+      <h3>Planeje cada passo</h3>
+      <p>Mova seus heróis pelo tabuleiro, use cercas, caminhos e cantos do quintal a seu favor, e encontre aquele movimento esperto que vira a batalha.</p>
     </div>
     <div class="pillar-card reveal reveal-delay-2">
-      <svg class="pillar-icon" viewBox="0 0 48 48" fill="none">
+      <svg class="pillar-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
         <circle cx="24" cy="24" r="18" stroke="#c9901a" stroke-width="1.5"/>
         <circle cx="24" cy="24" r="6" fill="#c9901a" opacity="0.3"/>
         <line x1="24" y1="6" x2="24" y2="14" stroke="#c9901a" stroke-width="2" stroke-linecap="square"/>
@@ -125,263 +140,154 @@
         <line x1="6" y1="24" x2="14" y2="24" stroke="#c9901a" stroke-width="2" stroke-linecap="square"/>
         <line x1="34" y1="24" x2="42" y2="24" stroke="#c9901a" stroke-width="2" stroke-linecap="square"/>
       </svg>
-      <h3>Tensão Furtiva</h3>
-      <p>A noite é território hostil. O Medidor de Ruído pune descuido. Cada ação tem peso sonoro — pense antes de mugir.</p>
+      <h3>Combine talentos</h3>
+      <p>O galo segura a linha, a ovelha cuida do grupo, o gato alcança pontos-chave e o pato cruza rotas difíceis. O time certo faz o quintal parecer novo.</p>
     </div>
     <div class="pillar-card reveal reveal-delay-3">
-      <svg class="pillar-icon" viewBox="0 0 48 48" fill="none">
+      <svg class="pillar-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
         <path d="M24 8 L28 20 L40 20 L30 28 L34 40 L24 32 L14 40 L18 28 L8 20 L20 20 Z" stroke="#c9901a" stroke-width="1.5" fill="none"/>
         <path d="M24 14 L26.5 22 L34 22 L28 27 L30 35 L24 30 L18 35 L20 27 L14 22 L21.5 22 Z" fill="#c9901a" opacity="0.2"/>
       </svg>
-      <h3>Narrativa Emocional</h3>
-      <p>O Espantalho não é mau. O jogador descobre isso lentamente. Uma história de fábula com consequências reais.</p>
+      <h3>Descubra o mistério</h3>
+      <p>O Espantalho guarda mais do que medo. A cada vitória, a fazenda revela uma lembrança, um segredo e um motivo para seguir em frente.</p>
     </div>
     <div class="pillar-card reveal reveal-delay-4">
-      <svg class="pillar-icon" viewBox="0 0 48 48" fill="none">
+      <svg class="pillar-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
         <rect x="8" y="32" width="8" height="10" fill="#c9901a" opacity="0.4"/>
         <rect x="20" y="24" width="8" height="18" fill="#c9901a" opacity="0.6"/>
         <rect x="32" y="14" width="8" height="28" fill="#c9901a" opacity="0.8"/>
         <line x1="8" y1="36" x2="40" y2="18" stroke="#c9901a" stroke-width="1.5" opacity="0.6"/>
       </svg>
-      <h3>Progressão Orgânica</h3>
-      <p>A evolução reflete a história do animal, não apenas números. O Gato aprende a confiar. O Cão busca redenção.</p>
+      <h3>Cresça com o time</h3>
+      <p>As classes evoluem junto com os personagens. Novos golpes, jeitos de ajudar e escolhas fazem cada animal parecer parte da sua própria turma.</p>
     </div>
   </div>
 </section>
 
+<section class="conversion-strip" aria-labelledby="playtest-strip-title">
+  <div class="conversion-copy">
+    <p class="section-label"><em>Comunidade</em></p>
+    <h2 id="playtest-strip-title">Quer testar antes do lançamento?</h2>
+    <p>Entre na lista de playtesters e ajude a calibrar dificuldade, ritmo das batalhas e clareza do primeiro capítulo.</p>
+  </div>
+  <a href="https://github.com/wreis-dev/Super-Critter-Story/issues/new?title=Quero%20entrar%20no%20playtest%20de%20Super%20Critter%20Story&body=Oi!%20Quero%20receber%20noticias%20e%20testar%20Super%20Critter%20Story%20quando%20o%20playtest%20abrir." class="btn-primary" target="_blank" rel="noopener">Pedir acesso</a>
+</section>
+
 <div class="section-divider"></div>
 
-<!-- ── CHARACTERS ── -->
 <section class="characters-wrap" id="personagens">
   <div class="section-header reveal">
-    <p class="section-label"><em>Quem anda pelos campos</em></p>
+    <p class="section-label"><em>Seu primeiro esquadrão</em></p>
     <h2>Os Guardiões da Fazenda</h2>
-    <p>Aproxime-se de cada um. Todos têm um nome — e um segredo.</p>
+    <p>Cada personagem tem função de batalha, conflito interno e uma maneira diferente de virar o jogo.</p>
   </div>
   <div class="chars-grid">
-
-    <!-- Corvinus -->
-    <div class="char-card reveal reveal-delay-1">
+    <div class="char-card reveal reveal-delay-1" tabindex="0">
       <div class="char-bg" style="background:linear-gradient(160deg,#1a0a02,#2a1506,#0e1f12)"></div>
       <img class="char-sprite char-voxel" src="./src/assets/characters/corvinus-voxel.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
-      <div class="char-info">
-        <div class="char-name">Corvinus</div>
-        <div class="char-role">Galo · Sentinela</div>
-      </div>
-      <div class="char-reveal">
-        <div class="char-reveal-name">Corvinus, o Arauto</div>
-        <div class="char-reveal-text">Líder de fato. Voz da razão num mundo que perdeu o equilíbrio. Aprende que liderança é proteger, não controlar.</div>
-      </div>
+      <div class="char-info"><div class="char-name">Corvinus</div><div class="char-role">Galo · Sentinela</div></div>
+      <div class="char-reveal"><div class="char-reveal-name">Corvinus, o Arauto</div><div class="char-reveal-text">Líder de fato. Protege aliados, controla ritmo e aprende que liderança é proteger, não controlar.</div></div>
     </div>
-
-    <!-- Leitoa -->
-    <div class="char-card reveal reveal-delay-2">
+    <div class="char-card reveal reveal-delay-2" tabindex="0">
       <div class="char-bg" style="background:linear-gradient(160deg,#2a0e18,#1a0a10,#0e1412)"></div>
       <img class="char-sprite char-voxel" src="./src/assets/characters/leitoa-voxel.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
-      <div class="char-info">
-        <div class="char-name">Leitoa</div>
-        <div class="char-role">Porco · Brutamontes</div>
-      </div>
-      <div class="char-reveal">
-        <div class="char-reveal-name">Leitoa, a Corajosa</div>
-        <div class="char-reveal-text">Coração do grupo. Excessivamente otimista. Descobre que coragem não é ausência de medo — é agir apesar dele.</div>
-      </div>
+      <div class="char-info"><div class="char-name">Leitoa</div><div class="char-role">Porco · Brutamontes</div></div>
+      <div class="char-reveal"><div class="char-reveal-name">Leitoa, a Corajosa</div><div class="char-reveal-text">Tanque otimista. Aguenta a linha de frente e descobre que coragem é agir apesar do medo.</div></div>
     </div>
-
-    <!-- Sombra -->
-    <div class="char-card reveal reveal-delay-3">
+    <div class="char-card reveal reveal-delay-3" tabindex="0">
       <div class="char-bg" style="background:linear-gradient(160deg,#040810,#0a0e18,#060c09)"></div>
       <img class="char-sprite char-voxel" src="./src/assets/characters/sombra-voxel.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
-      <div class="char-info">
-        <div class="char-name">Sombra</div>
-        <div class="char-role">Gato · Infiltrador</div>
-      </div>
-      <div class="char-reveal">
-        <div class="char-reveal-name">Sombra, o Furtivo</div>
-        <div class="char-reveal-text">Cínico e solitário. A unidade mais ágil do jogo. Reaprende lentamente o que significa confiar em alguém.</div>
-      </div>
+      <div class="char-info"><div class="char-name">Sombra</div><div class="char-role">Gato · Infiltrador</div></div>
+      <div class="char-reveal"><div class="char-reveal-name">Sombra, o Astuto</div><div class="char-reveal-text">A unidade mais ágil. Entra por rotas perigosas, finaliza alvos isolados e reaprende a confiar.</div></div>
     </div>
-
-    <!-- Nuvem -->
-    <div class="char-card reveal reveal-delay-4">
+    <div class="char-card reveal reveal-delay-4" tabindex="0">
       <div class="char-bg" style="background:linear-gradient(160deg,#0e1820,#0a1418,#0e1412)"></div>
       <img class="char-sprite char-voxel" src="./src/assets/characters/nuvem-voxel.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
-      <div class="char-info">
-        <div class="char-name">Nuvem</div>
-        <div class="char-role">Ovelha · Pastora</div>
-      </div>
-      <div class="char-reveal">
-        <div class="char-reveal-name">Nuvem, a Pastora</div>
-        <div class="char-reveal-text">Curandeira e pacifista. Decide que, às vezes, lutar é o maior ato de amor que existe.</div>
-      </div>
+      <div class="char-info"><div class="char-name">Nuvem</div><div class="char-role">Ovelha · Pastora</div></div>
+      <div class="char-reveal"><div class="char-reveal-name">Nuvem, a Pastora</div><div class="char-reveal-text">Curandeira e pacifista. Mantém o grupo vivo quando lutar vira o maior ato de amor possível.</div></div>
     </div>
-
-    <!-- Rex -->
-    <div class="char-card reveal reveal-delay-1">
+    <div class="char-card reveal reveal-delay-1" tabindex="0">
       <div class="char-bg" style="background:linear-gradient(160deg,#1a1208,#120e06,#0e1410)"></div>
       <img class="char-sprite char-voxel" src="./src/assets/characters/rex-voxel.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
-      <div class="char-info">
-        <div class="char-name">Rex</div>
-        <div class="char-role">Cão · Patrulheiro</div>
-      </div>
-      <div class="char-reveal">
-        <div class="char-reveal-name">Rex, o Veterano</div>
-        <div class="char-reveal-text">Guarda-corpo de Bento. Carrega a culpa pela morte do dono. Cada batalha é sua busca por redenção.</div>
-      </div>
+      <div class="char-info"><div class="char-name">Rex</div><div class="char-role">Cão · Patrulheiro</div></div>
+      <div class="char-reveal"><div class="char-reveal-name">Rex, o Veterano</div><div class="char-reveal-text">Fareja ameaças, protege rotas e carrega uma culpa antiga em cada batalha.</div></div>
     </div>
-
-    <!-- Trovador -->
-    <div class="char-card reveal reveal-delay-2">
+    <div class="char-card reveal reveal-delay-2" tabindex="0">
       <div class="char-bg" style="background:linear-gradient(160deg,#1a1a04,#141400,#0e1200)"></div>
       <img class="char-sprite char-voxel" src="./src/assets/characters/trovador-voxel.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
-      <div class="char-info">
-        <div class="char-name">Trovador</div>
-        <div class="char-role">Pato · Batedor</div>
-      </div>
-      <div class="char-reveal">
-        <div class="char-reveal-name">Trovador, o Desbravador</div>
-        <div class="char-reveal-text">Alívio cômico vital. Voa acima do terreno, imune a obstáculos. Aceita que ser pequeno não significa ser inútil.</div>
-      </div>
+      <div class="char-info"><div class="char-name">Trovador</div><div class="char-role">Pato · Batedor</div></div>
+      <div class="char-reveal"><div class="char-reveal-name">Trovador, o Desbravador</div><div class="char-reveal-text">Voa acima de obstáculos, abre caminho e prova que ser pequeno não significa ser inútil.</div></div>
     </div>
-
   </div>
 </section>
 
 <div class="section-divider"></div>
 
-<div class="interstitial reveal">
-  <p><em>"E entre um bicho e outro, o tempo aprendeu a andar de quatro patas."</em></p>
-</div>
-
-<!-- ── CLASSES ── -->
 <section class="classes-wrap" id="classes">
   <div class="section-header reveal">
-    <p class="section-label"><em>O que cada um se torna</em></p>
-    <h2>Bestiário</h2>
-    <p>Nenhum animal é apenas o que aparenta. Todos carregam dentro a memória do que poderiam ser.</p>
+    <p class="section-label"><em>Progressão</em></p>
+    <h2>Bestiário de classes</h2>
+    <p>Escolhas de evolução transformam identidade narrativa em função tática dentro da batalha.</p>
   </div>
   <div class="bestiary-grid reveal reveal-delay-1">
-
-    <div class="bestiary-entry">
-      <h3 class="bestiary-name">Galo</h3>
-      <p class="bestiary-quote">"Quem canta a aurora também a sustenta."</p>
-      <p class="bestiary-paths"><span class="bestiary-base">Sentinela</span><br><em>Arauto Real</em> &nbsp;·&nbsp; <em>Cantor da Aurora</em></p>
-    </div>
-
-    <div class="bestiary-entry">
-      <h3 class="bestiary-name">Porco</h3>
-      <p class="bestiary-quote">"Há coragem em quem se recusa a ser apenas comida."</p>
-      <p class="bestiary-paths"><span class="bestiary-base">Brutamontes</span><br><em>Encouraçado</em> &nbsp;·&nbsp; <em>Curandeiro de Lama</em></p>
-    </div>
-
-    <div class="bestiary-entry">
-      <h3 class="bestiary-name">Gato</h3>
-      <p class="bestiary-quote">"A sombra não esconde — escolhe."</p>
-      <p class="bestiary-paths"><span class="bestiary-base">Infiltrador</span><br><em>Assassino das Sombras</em> &nbsp;·&nbsp; <em>Envenenador Fantasma</em></p>
-    </div>
-
-    <div class="bestiary-entry">
-      <h3 class="bestiary-name">Ovelha</h3>
-      <p class="bestiary-quote">"A lã guarda segredos que a boca não sabe."</p>
-      <p class="bestiary-paths"><span class="bestiary-base">Pastora</span><br><em>Oráculo de Lã</em> &nbsp;·&nbsp; <em>Tecelã de Escudos</em></p>
-    </div>
-
-    <div class="bestiary-entry">
-      <h3 class="bestiary-name">Cão</h3>
-      <p class="bestiary-quote">"Farejar é lembrar de quem você foi."</p>
-      <p class="bestiary-paths"><span class="bestiary-base">Patrulheiro</span><br><em>Caçador de Presas</em> &nbsp;·&nbsp; <em>Farejador Tático</em></p>
-    </div>
-
-    <div class="bestiary-entry">
-      <h3 class="bestiary-name">Vaca</h3>
-      <p class="bestiary-quote">"Paciência é um tipo de força."</p>
-      <p class="bestiary-paths"><span class="bestiary-base">Camponesa</span><br><em>Colossa da Planície</em> &nbsp;·&nbsp; <em>Mestra das Ervas</em></p>
-    </div>
-
-    <div class="bestiary-entry">
-      <h3 class="bestiary-name">Pato</h3>
-      <p class="bestiary-quote">"Do alto, a cerca é só uma linha."</p>
-      <p class="bestiary-paths"><span class="bestiary-base">Batedor</span><br><em>Bombardeiro d'Água</em> &nbsp;·&nbsp; <em>Mensageiro Veloz</em></p>
-    </div>
-
-    <div class="bestiary-entry">
-      <h3 class="bestiary-name">Coelho</h3>
-      <p class="bestiary-quote">"Saltar é duvidar que o chão sirva."</p>
-      <p class="bestiary-paths"><span class="bestiary-base">Corredor</span><br><em>Arremessador de Pedras</em> &nbsp;·&nbsp; <em>Escudeiro Ágil</em></p>
-    </div>
-
+    <div class="bestiary-entry"><h3 class="bestiary-name">Galo</h3><p class="bestiary-quote">"Quem canta a aurora tambem a sustenta."</p><p class="bestiary-paths"><span class="bestiary-base">Sentinela</span><br><em>Arauto Real</em> &nbsp;·&nbsp; <em>Cantor da Aurora</em></p></div>
+    <div class="bestiary-entry"><h3 class="bestiary-name">Porco</h3><p class="bestiary-quote">"Ha coragem em quem se recusa a ser apenas comida."</p><p class="bestiary-paths"><span class="bestiary-base">Brutamontes</span><br><em>Encouracado</em> &nbsp;·&nbsp; <em>Curandeiro de Lama</em></p></div>
+    <div class="bestiary-entry"><h3 class="bestiary-name">Gato</h3><p class="bestiary-quote">"A sombra nao esconde. Escolhe."</p><p class="bestiary-paths"><span class="bestiary-base">Infiltrador</span><br><em>Assassino das Sombras</em> &nbsp;·&nbsp; <em>Envenenador Fantasma</em></p></div>
+    <div class="bestiary-entry"><h3 class="bestiary-name">Ovelha</h3><p class="bestiary-quote">"A la guarda segredos que a boca nao sabe."</p><p class="bestiary-paths"><span class="bestiary-base">Pastora</span><br><em>Oraculo de La</em> &nbsp;·&nbsp; <em>Tecela de Escudos</em></p></div>
+    <div class="bestiary-entry"><h3 class="bestiary-name">Cao</h3><p class="bestiary-quote">"Farejar e lembrar de quem voce foi."</p><p class="bestiary-paths"><span class="bestiary-base">Patrulheiro</span><br><em>Cacador de Presas</em> &nbsp;·&nbsp; <em>Farejador Tatico</em></p></div>
+    <div class="bestiary-entry"><h3 class="bestiary-name">Pato</h3><p class="bestiary-quote">"Do alto, a cerca e so uma linha."</p><p class="bestiary-paths"><span class="bestiary-base">Batedor</span><br><em>Bombardeiro d'Agua</em> &nbsp;·&nbsp; <em>Mensageiro Veloz</em></p></div>
   </div>
 </section>
 
 <div class="section-divider"></div>
 
-<!-- ── PLATFORMS ── -->
 <section class="platforms-wrap" id="plataformas">
   <div class="section-header reveal">
-    <p class="section-label"><em>Quando você estiver pronto</em></p>
-    <h2>O quintal estará aqui</h2>
+    <p class="section-label"><em>Playtest e descoberta</em></p>
+    <h2>O quintal abre primeiro para a comunidade</h2>
+    <p>Entre na lista para receber novidades do playtest e ajudar o jogo a chegar melhor à Steam, iOS e Android.</p>
   </div>
   <figure class="platform-showcase reveal reveal-delay-1">
-    <img src="./src/assets/images/switch-battle-preview-cutout.png"
-         alt="Cena de batalha de Super Critter Story em um console portátil"
-         loading="lazy"
-         decoding="async">
+    <img src="./src/assets/images/switch-battle-preview-cutout.png" alt="Cena de batalha de Super Critter Story em um console portátil" loading="lazy" decoding="async">
   </figure>
   <div class="platform-chips reveal reveal-delay-1">
-    <div class="platform-chip">
-      <div class="platform-name">PC — Steam</div>
-      <div class="platform-detail">Windows · Mac · Linux · US$ 19,99</div>
-    </div>
-    <div class="platform-chip">
-      <div class="platform-name">iOS</div>
-      <div class="platform-detail">iPhone · iPad · US$ 7,99</div>
-    </div>
-    <div class="platform-chip">
-      <div class="platform-name">Android</div>
-      <div class="platform-detail">Google Play · US$ 7,99</div>
-    </div>
+    <div class="platform-chip"><div class="platform-name">PC · Steam</div><div class="platform-detail">Wishlist e demo planejadas</div></div>
+    <div class="platform-chip"><div class="platform-name">Mobile</div><div class="platform-detail">iOS e Android no roadmap</div></div>
+    <div class="platform-chip"><div class="platform-name">Comunidade</div><div class="platform-detail">Feedback de balanceamento e UX</div></div>
   </div>
-  <div style="margin-top:50px;" class="reveal reveal-delay-2">
-    <a href="#" class="btn-primary" style="margin-right:16px">Lembre-me quando chegar</a>
-    <a href="#historia" class="btn-secondary">Voltar ao início</a>
+  <div class="launch-actions reveal reveal-delay-2">
+    <a href="https://github.com/wreis-dev/Super-Critter-Story/issues/new?title=Quero%20entrar%20no%20playtest%20de%20Super%20Critter%20Story&body=Oi!%20Quero%20receber%20noticias%20e%20testar%20Super%20Critter%20Story%20quando%20o%20playtest%20abrir." class="btn-primary" target="_blank" rel="noopener">Entrar no playtest</a>
+    <a href="https://github.com/wreis-dev/Super-Critter-Story" class="btn-secondary" target="_blank" rel="noopener">Acompanhar devlog</a>
   </div>
+  <p class="cta-note">Sem demo pública ainda. O CTA leva para uma solicitação de playtest no GitHub.</p>
 </section>
 
-<!-- ── FOOTER ── -->
 <footer>
   <div>
     <div class="footer-logo">Super Critter Story: Backyard Legends</div>
-    <div class="footer-copy">© 2025 Backyard Legends Studios · Todos os direitos reservados</div>
-    <div style="margin-top:10px;font-size:12px;color:rgba(245,233,204,0.2);font-family:'Space Mono',monospace;">
-      Inspirado em Final Fantasy Tactics · Tactics Ogre · Animal Crossing · Stardew Valley
-    </div>
+    <div class="footer-copy">© 2026 Backyard Legends Studios · RPG tático por turnos indie</div>
+    <div class="footer-tagline">Inspirado em Final Fantasy Tactics · Tactics Ogre · Animal Crossing · Stardew Valley</div>
   </div>
   <div class="footer-links">
-    <a href="#">Presskit</a>
-    <a href="#">Contato</a>
-    <a href="#">Privacidade</a>
-    <a href="#">Newsletter</a>
+    <a href="https://github.com/wreis-dev/Super-Critter-Story" target="_blank" rel="noopener">Presskit</a>
+    <a href="https://github.com/wreis-dev/Super-Critter-Story/issues/new?title=Contato%20sobre%20Super%20Critter%20Story" target="_blank" rel="noopener">Contato</a>
+    <a href="#plataformas">Playtest</a>
+    <a href="#inicio">Topo</a>
   </div>
 </footer>
 
-<!-- ── AMBIENT PLAYER ── -->
 <div class="ambient-player" id="ambient-player" data-playing="false" data-theme-track="day">
   <button class="ambient-main" id="ambient-toggle" type="button" title="Musica ambiente" aria-label="Tocar musica ambiente" aria-pressed="false">
-    <svg class="ambient-icon ambient-icon-play" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M8 5v14l11-7z"></path>
-    </svg>
-    <svg class="ambient-icon ambient-icon-pause" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M7 5h4v14H7zM13 5h4v14h-4z"></path>
-    </svg>
+    <svg class="ambient-icon ambient-icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+    <svg class="ambient-icon ambient-icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"></path></svg>
   </button>
   <div class="ambient-details">
     <span class="ambient-title" id="ambient-title" aria-live="polite">Lenda no Milharal</span>
     <input class="ambient-volume" id="ambient-volume" type="range" min="0" max="1" step="0.01" value="0.45" aria-label="Volume da musica ambiente">
   </div>
-  <audio id="ambient-day-audio" src="./src/assets/audio/suuny.mp3" loop preload="auto"></audio>
-  <audio id="ambient-night-audio" src="./src/assets/audio/moonlit-backyard-legends.mp3" loop preload="auto"></audio>
+  <audio id="ambient-day-audio" src="./src/assets/audio/suuny.mp3" loop preload="none"></audio>
+  <audio id="ambient-night-audio" src="./src/assets/audio/moonlit-backyard-legends.mp3" loop preload="none"></audio>
 </div>
-<!-- ── THEME TOGGLE ── -->
 <button class="theme-toggle" id="theme-toggle" type="button" title="Alternar Dia / Noite" aria-label="Alternar tema">
   🌙
 </button>

@@ -4,7 +4,6 @@ const FADE_MS = 1600;
 const DEFAULT_VOLUME = 0.45;
 const STORAGE_VOLUME = "critterAudioVolume";
 const STORAGE_MUTED = "critterAudioMuted";
-const AUTOPLAY_EVENTS = ["click", "keydown", "pointerdown", "touchstart"];
 
 function clampVolume(value) {
   return Math.min(1, Math.max(0, value));
@@ -60,7 +59,6 @@ export function initAmbientPlayer() {
   let currentTrack = getCurrentTheme();
   let isPlaying = false;
   let fadeFrame = null;
-  let autoplayFallbackArmed = false;
   let baseVolume = readStoredVolume();
 
   volumeControl.value = String(baseVolume);
@@ -103,39 +101,15 @@ export function initAmbientPlayer() {
     await activeAudio.play();
   }
 
-  function removeAutoplayFallback() {
-    if (!autoplayFallbackArmed) return;
-    AUTOPLAY_EVENTS.forEach((eventName) => {
-      document.removeEventListener(eventName, handleAutoplayInteraction);
-    });
-    autoplayFallbackArmed = false;
-  }
-
-  function armAutoplayFallback() {
-    if (autoplayFallbackArmed) return;
-    autoplayFallbackArmed = true;
-    AUTOPLAY_EVENTS.forEach((eventName) => {
-      document.addEventListener(eventName, handleAutoplayInteraction, { once: true });
-    });
-  }
-
-  async function tryStartPlayback({ useFallback = false } = {}) {
+  async function tryStartPlayback() {
     try {
       await playCurrentTrack();
       isPlaying = true;
-      removeAutoplayFallback();
     } catch (error) {
       isPlaying = false;
-      if (useFallback) armAutoplayFallback();
-      console.info("A musica ambiente aguardara a primeira interacao do usuario para iniciar.", error);
+      console.info("A musica ambiente nao pode iniciar neste momento.", error);
     }
     updatePlayerUi();
-  }
-
-  async function handleAutoplayInteraction() {
-    removeAutoplayFallback();
-    if (isPlaying) return;
-    await tryStartPlayback({ useFallback: false });
   }
 
   function crossfadeTo(nextTrack, previousTrack) {
@@ -208,7 +182,7 @@ export function initAmbientPlayer() {
       return;
     }
 
-    await tryStartPlayback({ useFallback: false });
+    await tryStartPlayback();
   });
 
   volumeControl.addEventListener("input", () => {
@@ -220,7 +194,6 @@ export function initAmbientPlayer() {
 
   applyIdleVolumes();
   updatePlayerUi();
-  tryStartPlayback({ useFallback: true });
 
   return {
     syncWithTheme,
