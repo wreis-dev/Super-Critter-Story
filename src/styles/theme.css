@@ -111,6 +111,21 @@
   body.day-theme .char-card:hover .char-bg {
     filter: brightness(0.58) saturate(0.9) sepia(0.18);
   }
+  body.day-theme .char-portrait {
+    border-color: rgba(255,240,200,0.58);
+    background: rgba(36,18,8,0.9);
+    box-shadow:
+      0 18px 34px rgba(0,0,0,0.42),
+      0 0 0 6px rgba(31,11,4,0.44),
+      0 0 0 7px rgba(232,160,64,0.26),
+      inset 0 0 24px rgba(232,160,64,0.16);
+  }
+  body.day-theme .char-portrait-inner {
+    background:
+      radial-gradient(circle at 50% 48%, rgba(255,190,86,0.34), transparent 36%),
+      radial-gradient(circle at 52% 54%, rgba(255,240,200,0.13), transparent 45%),
+      linear-gradient(150deg, rgba(58,30,13,0.96), rgba(24,12,6,0.96));
+  }
   body.day-theme .char-info {
     background: linear-gradient(to top, rgba(31,11,4,0.98) 0%, transparent 100%);
   }
