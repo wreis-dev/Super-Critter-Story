@@ -146,3 +146,6 @@
   body.day-theme .platform-chip:hover {
     border-color: var(--gold);
   }
+  body.day-theme .survey-form {
+    border-color: rgba(232,160,64,0.24);
+  }

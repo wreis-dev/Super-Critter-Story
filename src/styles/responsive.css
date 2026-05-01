@@ -17,6 +17,11 @@
     .pillars-wrap, .characters-wrap, .classes-wrap, .platforms-wrap { padding: 90px 20px; }
     .interstitial { padding: 70px 20px; }
     .bestiary-grid { gap: 32px 20px; }
+    .survey-shell { padding: 106px 16px 52px; }
+    .survey-intro h1 { font-size: 36px; }
+    .survey-intro p:last-child { font-size: 16px; }
+    .survey-form { margin-top: 28px; }
+    .survey-form iframe { min-height: 860px; }
     footer { grid-template-columns: 1fr; }
     .footer-links { align-items: flex-start; }
   }
