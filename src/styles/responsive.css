@@ -20,6 +20,13 @@
     .survey-shell { padding: 106px 16px 52px; }
     .survey-intro h1 { font-size: 36px; }
     .survey-intro p:last-child { font-size: 16px; }
+    .survey-meta {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: min(100%, 320px);
+      margin-left: auto;
+      margin-right: auto;
+    }
     .survey-form { margin-top: 28px; }
     .survey-form iframe { min-height: 860px; }
     footer { grid-template-columns: 1fr; }
