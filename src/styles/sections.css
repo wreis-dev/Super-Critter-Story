@@ -757,6 +757,10 @@
       #1f0b04;
   }
   .survey-page nav {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
     background: rgba(6,12,9,0.88);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(201,144,26,0.18);
@@ -765,7 +769,7 @@
     position: relative;
     z-index: 1;
     min-height: 100vh;
-    padding: 96px 24px 72px;
+    padding: 24px 24px 72px;
   }
   .survey-intro {
     position: relative;
