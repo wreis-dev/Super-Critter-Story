@@ -768,9 +768,8 @@
     padding: 96px 24px 72px;
   }
   .survey-intro {
-    position: sticky;
-    top: 72px;
-    z-index: 4;
+    position: relative;
+    z-index: 2;
     width: min(760px, 100%);
     margin: 0 auto;
     padding: 18px 18px 20px;

@@ -19,7 +19,6 @@
     .bestiary-grid { gap: 32px 20px; }
     .survey-shell { padding: 88px 14px 52px; }
     .survey-intro {
-      top: 72px;
       padding: 14px 14px 16px;
     }
     .survey-intro h1 { font-size: 30px; }
